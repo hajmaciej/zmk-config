@@ -63,32 +63,32 @@
 //              };
 
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |  |  ^  |  &  |  *  |  (  |  )  | DEL  |
-// | CTRL |     |     |     |     |     |  |  -  |  =  |  [  |  ]  |  |  |  `   |
-// | SHFT |     |     |     |     |     |  |  _  |  +  |  {  |  }  |  \  |  ~   |
-//                    | GUI |     | SPC |  | ENT |     | ALT |
+// | TAB  |  1   |  2   |  3   |  4   |  5    |  |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | BRI+ | VOL+ | MUTE |      | PREV | NEXT  |  |  -  |  =  |  [  |  ]  |  |  |  `   |
+// | BRI- | VOL- | CUT  | COPY | PAST | PL/PA |  |  _  |  +  |  {  |  }  |  \  |  ~   |
+//                      | GUI  |      | SPC   |  | ENT |     | ALT |
 // -----------------------------------------------------------------------------------------
                 raise_layer {
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT      &kp HASH    &kp DLLR     &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp DEL
-   &kp LCTRL &trans   &trans      &trans      &trans       &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE &kp GRAVE
-   &kp LSHFT &trans   &trans      &trans      &trans       &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp BSLH &kp TILDE
-                    	          &kp LGUI    &trans       &kp SPACE   &kp RET   &trans    &kp RALT
+   &kp TAB      &kp N1       &kp N2       &kp N3        &kp N4         &kp N5       &kp N6    &kp N7    &kp N8   &kp N9   &kp N0   &kp BSPC
+   &kp C_BRI_UP &kp C_VOL_UP &kp C_MUTE   &trans        &kp C_PREV     &kp C_NEXT   &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp PIPE &kp GRAVE
+   &kp C_BRI_DN &kp C_VOL_DN &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_PASTE &kp C_PP     &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp BSLH &kp TILDE
+                    	     &kp LGUI     &trans        &kp SPACE      &kp RET      &trans    &kp RALT
                         >;
                 };
                 
 // ------------------------------------------------------------------------------------------------------------
-// | EP_TOG |   1    |   2     |   3    |   4    |   5    |  |   6    |   7    |  8  |   9   |   0    | BKSP  |
-// | BTCLR  |  BT1   |  BT2    |  BT3   |  BT4   | USBtog |  | LEFT   | DOWN   | UP  | RIGHT |        |       |
-// | SHFT   | RGBtog | RGBeff+ | RGBbr+ | RGBbr- |        |  | RGBsp+ | RGBsp- | Hue | Blue  | White  | Green |
-//                             | GUI    |        | SPACE  |  | ENTER  |        | ALT |
+// | POWER  |  !   |  @     |  #     |  $      |  %     |  |  ^    |  &   |  *    |  (    |  ) | DEL  |
+// | BTclr  |  BT1 |  BT2   |  BT3   |  RGBsp+ | RGBbr+ |  | LEFT  | DOWN | UP    | RIGHT |    | HOME |
+// | USBtog |      | RGBtog | RGBeff |  RGBsp- | RGBbr- |  | HUE   | BLUE | WHITE | GREEN |    | END  |
+//                          | GUI    |         | SPACE  |  | ENTER |      | ALT   |
 // ------------------------------------------------------------------------------------------------------------
                 lower_layer {
                         bindings = <
-   &ext_power EP_TOG &kp N1          &kp N2          &kp N3          &kp N4          &kp N5         &kp N6          &kp N7          &kp N8          &kp N9                           &kp N0                          &kp BSPC
-   &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &out OUT_TOG   &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT                        &trans                          &trans
-   &kp LSHFT         &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_BRI &rgb_ug RGB_BRD &trans         &rgb_ug RGB_SPI &rgb_ug RGB_SPD &rgb_ug RGB_HUI &rgb_ug RGB_COLOR_HSB(210,40,90) &rgb_ug RGB_COLOR_HSB(65,0,100) &rgb_ug RGB_COLOR_HSB(70,90,100)
-                          	                     &kp LGUI        &trans          &kp SPACE      &kp RET         &trans          &kp RALT
+   &ext_power EP_TOG &kp EXCL     &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp CARET       &kp AMPS                         &kp KP_MULTIPLY                 &kp LPAR                         &kp RPAR &kp DEL
+   &bt BT_CLR        &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2    &rgb_ug RGB_SPI &rgb_ug RGB_BRI &kp LEFT        &kp DOWN                         &kp UP                          &kp RIGHT                        &trans   &kp HOME
+   &out OUT_TOG      &trans       &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_SPD &rgb_ug RGB_BRD &rgb_ug RGB_HUI &rgb_ug RGB_COLOR_HSB(210,40,90) &rgb_ug RGB_COLOR_HSB(65,0,100) &rgb_ug RGB_COLOR_HSB(70,90,100) &trans   &kp END
+                          	                  &kp LGUI        &trans          &kp SPACE      &kp RET          &trans                           &kp RALT
                         >;
                 };
         };
