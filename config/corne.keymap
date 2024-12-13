@@ -16,6 +16,8 @@
 #define LOWER 1
 #define RAISE 2
 #define FUNCTION 3
+#define LRESET 4
+#define RRESET 5
 
 #define THINKPAD BT_SEL 0
 #define MACBOOK BT_SEL 1
@@ -25,6 +27,14 @@
 #define col RGB_COLOR_HSB
 #define rr rgb_ug
 #define po ext_power
+
+#define BLUE col(240,100,100)
+#define WHITE col(65,0,100)
+#define GREEN col(65,100,100)
+#define PURPLE col(280,100,100)
+#define BLACK col(0,100,0)
+#define GRAY col(0,0,50)
+
 
 // Overwrite number of leds on the keyboard. A Corne has 27 per side.
 &led_strip { 
@@ -98,10 +108,10 @@
 // | Blue  | White    | Green   | PURPLE | BLACK | GRAY  |  | RGBbr- | RGBsp- | RGBhu- | RGBsa- | RGBef- | EPoff  |
 //                              |        | XXXXX |  SPC  |  |  ENT   | XXXXXX |        |
                         bindings = <
-    &kp F1               &kp F2            &kp F3              &kp F4               &kp F5           &kp F6          &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12
-    &bt BT_CLR           &bt THINKPAD      &bt MACBOOK         &bt IPHONE           &bt FREE         &out OUT_TOG    &rr RGB_BRI &rr RGB_SPI &rr RGB_HUI &rr RGB_SAI &rr RGB_EFF &rr RGB_TOG
-    &rr col(240,100,100) &rr col(65,0,100) &rr col(65,100,100) &rr col(280,100,100) &rr col(0,100,0) &rr col(0,0,50) &rr RGB_BRD &rr RGB_SPD &rr RGB_HUD &rr RGB_SAD &rr RGB_EFR &po EP_TOG
-                    	                                       &trans               &trans           &kp SPACE       &kp RET     &trans      &trans
+    &kp F1     &kp F2       &kp F3      &kp F4     &kp F5    &kp F6          &kp F7      &kp F8      &kp F9      &kp F10     &kp F11     &kp F12
+    &bt BT_CLR &bt THINKPAD &bt MACBOOK &bt IPHONE &bt FREE  &out OUT_TOG    &rr RGB_BRI &rr RGB_SPI &rr RGB_HUI &rr RGB_SAI &rr RGB_EFF &rr RGB_TOG
+    &rr BLUE   &rr WHITE    &rr GREEN   &rr PURPLE &rr BLACK &rr GRAY        &rr RGB_BRD &rr RGB_SPD &rr RGB_HUD &rr RGB_SAD &rr RGB_EFR &po EP_TOG
+                    	                &trans     &trans    &kp SPACE       &kp RET     &trans      &trans
                         >;
                 };
         };
