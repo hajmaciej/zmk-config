@@ -19,21 +19,15 @@
 #define LRESET 4
 #define RRESET 5
 
-#define THINKPAD BT_SEL 0
-#define MACBOOK BT_SEL 1
-#define IPHONE BT_SEL 2
-#define FREE BT_SEL 3
-
-#define col RGB_COLOR_HSB
 #define rr rgb_ug
 #define po ext_power
 
-#define BLUE col(240,100,100)
-#define WHITE col(65,0,100)
-#define GREEN col(65,100,100)
-#define PURPLE col(280,100,100)
-#define BLACK col(0,100,0)
-#define GRAY col(0,0,50)
+#define BLUE RGB_COLOR_HSB(240,100,100)
+#define WHITE RGB_COLOR_HSB(65,0,100)
+#define GREEN RGB_COLOR_HSB(65,100,100)
+#define PURPLE RGB_COLOR_HSB(280,100,100)
+#define BLACK RGB_COLOR_HSB(0,100,0)
+#define GRAY RGB_COLOR_HSB(0,0,50)
 
 
 // Overwrite number of leds on the keyboard. A Corne has 27 per side.
